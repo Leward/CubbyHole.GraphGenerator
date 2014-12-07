@@ -29,10 +29,10 @@ class Generator {
 	 */
 	def generateGraph() {
 		graph = new Graph()
-		3.times {
+		graphConfig.nbUsersToGenerate.times {
 			generateUser()
 		}
-		generateSomeShares(3)
+		generateSomeShares(graphConfig.maxSharesPerUser)
 	}
 	
 	def generateUser() {
